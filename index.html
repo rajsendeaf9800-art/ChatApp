@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Realtime Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2ca250">
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loadingScreen" class="screen">Loading…</div>
+
+<!-- OFFLINE -->
+<div id="offlineScreen" class="screen">
+  <h2>No Internet</h2>
+  <p>Please check your connection</p>
+</div>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="screen">
+  <img src="/icons/icon-512.png" />
+  <h2>
+    Deaf Friends Group 🧏🏻
+    <br>
+    Enter Username
+  </h2>
+  <input id="usernameInput" placeholder="Your name">
+  <button id="saveUsername">Continue</button>
+</div>
+
+<!-- CHAT -->
+<div id="chatScreen" class="chat">
+  <header>
+    <span>💬 Chat</span>
+    <button id="logout">Logout</button>
+  </header>
+
+  <div id="messages"></div>
+
+  <div class="inputBox">
+    <input id="messageInput" placeholder="Type a message">
+    <button id="sendBtn">Send</button>
+  </div>
+</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
