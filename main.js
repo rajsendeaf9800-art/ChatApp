@@ -14,8 +14,6 @@ import {
 
 /***********************
  🔥 FIREBASE CONFIG 
- AIzaSyBTafY77KurCjZu7I5f-Ye-Xq_7y6Moefg
- AIzaSyBNSC3hHxlvgttBP_op0bioZ6K_VKljSGY
 ***********************/
 const firebaseConfig = {
   apiKey: "AIzaSyBTafY77KurCjZu7I5f-Ye-Xq_7y6Moefg",
