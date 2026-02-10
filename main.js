@@ -13,10 +13,12 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
 /***********************
- 🔥 FIREBASE CONFIG
+ 🔥 FIREBASE CONFIG 
+ AIzaSyBTafY77KurCjZu7I5f-Ye-Xq_7y6Moefg
+ AIzaSyBNSC3hHxlvgttBP_op0bioZ6K_VKljSGY
 ***********************/
 const firebaseConfig = {
-  apiKey: "AIzaSyBNSC3hHxlvgttBP_op0bioZ6K_VKljSGY",
+  apiKey: "AIzaSyBTafY77KurCjZu7I5f-Ye-Xq_7y6Moefg",
   authDomain: "chat-c54e1.firebaseapp.com",
   databaseURL: "https://chat-c54e1-default-rtdb.firebaseio.com/",
   projectId: "chat-c54e1",
