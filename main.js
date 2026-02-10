@@ -14,6 +14,7 @@ import {
 
 /***********************
  🔥 FIREBASE CONFIG 
+  * d
 ***********************/
 const firebaseConfig = {
   apiKey: "AIzaSyBTafY77KurCjZu7I5f-Ye-Xq_7y6Moefg",
