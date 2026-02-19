@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raj Sen - Report Card (2025)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+    
+    html {
+      height: 100%;
+      background-color: #444;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      background-color: #FFE380;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
+      width: 100%;
+      background-color: #FFE380;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    h2 {
+      font-size: 10px;
+      text-align: center;
+    }
+    
+    #pr {
+      font-size: 20px;
+      color: #220288;
+    }
+    
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    
+    #header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50vh;
+      margin: 0 80px;
+    }
+    
+    body {
+      background-image: url("/border.png");
+      background-size: contain;
+      background-position: center;
+      padding: 0 50px !important;
+    }
+    
+    #ts {
+      color: #21A0FF;
+    }
+    
+    #header1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100% !important;
+      background: #e491ff;
+      background: linear-gradient(90deg, rgba(228, 145, 255, 1) 0%, rgba(102, 222, 255, 1) 31%, rgba(84, 204, 255, 1) 75%, rgba(237, 221, 83, 1) 100%);
+    }
+    
+    
+    table {
+      width: 100dvh;
+      height: 100%;
+      border: none;
+    }
+    
+    table tr {
+      width: 100%;
+      height: auto;
+      background: #898;
+      display: flex;
+      border: none;
+    }
+    
+    table tr td {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 30px;
+      border: 0.5px solid black
+    }
+    
+    table tr td:nth-child(1) {
+      width: 25% !important;
+      background: #21A0FF;
+      font-size: 8px;
+    }
+    
+    table tr td:nth-child(2) {
+      width: 25% !important;
+      background: #21A0FF;
+      font-size: 8px;
+    }
+    
+    table tr td:nth-child(3) {
+      width: 25% !important;
+      background: #21A0FF;
+      font-size: 8px;
+    }
+    
+    
+    table tr td:nth-child(4) {
+      width: 25% !important;
+      background: #21A0FF;
+      font-size: 8px;
+    }
+    
+    #two td:nth-child(1) {
+      width: 75% !important;
+    }
+    
+    #two td:nth-child(2) {
+      width: 25% !important;
+    }
+    
+    
+    
+    #three td:nth-child(1) {
+      width: 50% !important;
+    }
+    
+    #three td:nth-child(2) {
+      width: 25% !important;
+    }
+    
+    #three td:nth-child(3) {
+      width: 25% !important;
+    }
+    
+    #container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+    
+    #subjects td {
+      display: flex;
+      align-items: center;
+      font-size: 6px !important;
+      padding: 3px 5px;
+      height: 50px;
+      background-color: #FFE632;
+    }
+    
+    p {
+      font-size: 8px;
+    }
+    
+    .span {
+      position: relative;
+      font-size: 0.7em;
+      /* Makes it smaller */
+      top: -0.5em;
+      /* Moves it above the baseline */
+      vertical-align: baseline;
+      /* Prevents messing up */
+    }
+    
+    #t3b td {
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #t3b td:nth-child(1) {
+      width: 50% !important;
+    }
+    
+    #t3b td:nth-child(2) {
+      width: 50% !important;
+    }
+    
+    
+    
+    #t3a td:nth-child(1) {
+      width: 50% !important;
+    }
+    
+    #t3a td:nth-child(2) {
+      width: 25% !important;
+    }
+    
+    #t3a td:nth-child(3) {
+      width: 25% !important;
+    }
+    
+    #alf {
+      flex-direction: column;
+    }
+    
+    #sh {
+      width: 7% !important;
+    }
+    
+    #tc3 td:nth-child(2) {
+      width: 43% !important;
+    }
+    
+    #tc3 td:nth-child(3) {
+      width: 25% !important;
+    }
+    
+    #tc3 td:nth-child(4) {
+      width: 25% !important;
+    }
+    
+    #he2 {
+      width: 100% !important;
+    }
+    
+    #tga td:nth-child(1) {
+      width: 50% !important;
+    }
+    
+    #tga td:nth-child(2) {
+      width: 25% !important;
+    }
+    
+    #tga td:nth-child(3) {
+      width: 25% !important;
+    }
+    
+    
+    #signature {
+      margin-top: 12px !important;
+    }
+    
+    #signature td:nth-child(1) {
+      width: 50% !important;
+    }
+    
+    #signature td:nth-child(2) {
+      width: 50% !important;
+    }
+    
+    #signature2 td:nth-child(1) {
+      width: 50% !important;
+    }
+    
+    #signature2 td:nth-child(2) {
+      width: 50% !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <img src="/icon.jpg">
+    <div>
+      <h2 id="pr"> PROCESS REPORT CARD</h2>
+      <h2 id="ts">THE SALVATION ARMY HOME & SCHOOL FOR THE DEAF, DARJEELING</h2>
+    </div>
+    <img src="/icon.jpg">
+  </div>
+  
+  </div>
+  <p>NAME : RAJ SEN</p>
+  <div id="container">
+    <table border="1" cellpadding="20">
+      <tr>
+        <td id="header1">
+          HALF YEARLY EXAMINATION
+        </td>
+      </tr>
+      
+      <tr id="subjects">
+        <td>
+          SUBJECTS
+        </td>
+        <td>
+          TEST <br> 20 <br> EXAM MARKS
+        </td>
+        <td>
+          TEST <br> 80 <br> EXAM MARKS
+        </td>
+        <td>
+          TOTAL <br> 100 <br> EXAM MARKS
+        </td>
+      </tr>
+      <tr>
+        <td id="subject">
+          ENGLISH
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          70
+        </td>
+        <td>
+          88
+        </td>
+      </tr>
+      <tr>
+        <td>
+          NEPALI
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          87
+        </td>
+      </tr>
+      <tr>
+        <td>
+          MATHEMATICS
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          72
+        </td>
+        <td>
+          92
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ISL
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          71
+        </td>
+        <td>
+          90
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SOCIAL STUDIES
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          94
+        </td>
+        <td>
+          94
+        </td>
+      </tr>
+      <tr>
+        <td>SCIENCE</td>
+        <td>20</td>
+        <td>72</td>
+        <td>92</td>
+      </tr>
+      <tr>
+        <td>COMPUTER</td>
+        <td>19</td>
+        <td>75</td>
+        <td>94</td>
+      </tr>
+      <tr id="three">
+        <td>VALUE ED.</td>
+        <td>Grade</td>
+        <td>--</td>
+      </tr>
+      <tr id="three">
+        <td>ART & CRAFT</td>
+        <td>GRADE</td>
+        <td>A</td>
+      </tr>
+      <tr id="three">
+        <td>GAMES</td>
+        <td>GRADE</td>
+        <td>B</td>
+      </tr>
+      <tr id="two">
+        <td>OVERALL ASSESMENT</td>
+        <td>--</td>
+      </tr>
+      <tr id="two">
+        <td>TOTAL</td>
+        <td>637</td>
+      </tr>
+      <tr id="two">
+        <td>PERCENTAGE</td>
+        <td>91%</td>
+      </tr>
+      <!-- Below signature -->
+      <tr id="signature">
+        <td>
+          Division
+        </td>
+        <td>
+          I Div
+        </td>
+      </tr>
+      <tr id="signature2">
+        <td>
+          POSITION
+        </td>
+        <td>
+          1ST
+        </td>
+      </tr>
+      <tr id="signature2">
+        <td>
+          ATTENDANCE
+        </td>
+        <td>
+          97 DAYS
+        </td>
+      </tr>
+      <tr id="signature2">
+        <td>
+          REMARK
+        </td>
+        <td>
+          Well done! <br>
+          Keep it up.
+        </td>
+      </tr>
+    </table>
+    <!-- Final Term Examination -->
+    <table border="1" cellpadding="20">
+      <tr>
+        <td id="header1">
+          FINAL TERM EXAMINATION
+        </td>
+      </tr>
+      <tr id="subjects">
+        <td>
+          SUBJECTS
+        </td>
+        <td>
+          TEST <br> 20 <br> EXAM MARKS
+        </td>
+        <td>
+          TEST <br> 80 <br> EXAM MARKS
+        </td>
+        <td>
+          TOTAL <br> 100 <br> EXAM MARKS
+        </td>
+      </tr>
+      <tr>
+        <td id="subject">ENGLISH</td>
+        <td>20</td>
+        <td>78</td>
+        <td>98</td>
+      </tr>
+      <tr>
+        <td>NEPALI</td>
+        <td>20</td>
+        <td>65</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>MATHEMATICS</td>
+        <td>18</td>
+        <td>70</td>
+        <td>88</td>
+      </tr>
+      <tr>
+        <td>ISL</td>
+        <td>20</td>
+        <td>73</td>
+        <td>93</td>
+      </tr>
+      <tr>
+        <td>SOCIAL STUDIES</td>
+        <td>20</td>
+        <td>66</td>
+        <td>86</td>
+      </tr>
+      <tr>
+        <td>SCIENCE</td>
+        <td>18</td>
+        <td>70</td>
+        <td>88</td>
+      </tr>
+      <tr>
+        <td>COMPUTER</td>
+        <td>20</td>
+        <td>71</td>
+        <td>91</td>
+      </tr>
+      
+      <tr id="three">
+        <td>VALUE ED.</td>
+        <td>Grade</td>
+        <td>A</td>
+      </tr>
+      <tr id="three">
+        <td>ART & CRAFT</td>
+        <td>GRADE</td>
+        <td>A</td>
+      </tr>
+      <tr id="three">
+        <td>GAMES</td>
+        <td>GRADE</td>
+        <td>B</td>
+      </tr>
+      <tr id="two">
+        <td>OVERALL ASSESMENT</td>
+        <td>10</td>
+      </tr>
+      <tr id="two">
+        <td>TOTAL</td>
+        <td>639</td>
+      </tr>
+      <tr id="two">
+        <td>PERCENTAGE</td>
+        <td>91%</td>
+      </tr>
+      <!-- Below signature -->
+      <tr id="signature">
+        <td>
+          Division
+        </td>
+        <td>
+          DIST
+        </td>
+      </tr>
+      <tr id="signature2">
+        <td>
+          POSITION
+        </td>
+        <td>
+          2ND
+        </td>
+      </tr>
+      <tr id="signature2">
+        <td>
+          ATTENDANCE
+        </td>
+        <td>
+          99 DAYS
+        </td>
+      </tr>
+      <tr id="signature2">
+        <td>
+          REMARK
+        </td>
+        <td>
+          Promoted to class VII
+        </td>
+      </tr>
+    </table>
+    <!-- Overall assesment -->
+    <table border="1" cellpadding="20">
+      <tr id="t3b">
+        <td style="background: linear-gradient(90deg,rgba(1, 97, 14, 1) 0%, rgba(3, 255, 3, 1) 100%);">
+          OVERALL ASSESMENT
+        </td>
+        <td style="background: linear-gradient(90deg,rgba(1, 97, 14, 1) 0%, rgba(3, 255, 3, 1) 100%);">
+          POINTS
+        </td>
+      </tr>
+      <tr id="t3a">
+        <td>PERFORMANCE IN THE CLASSROOM CURRICULAR</td>
+        <td id="alf">
+          <span>1<span class="span">st</span></span>
+          Semester
+        </td>
+        <td id="alf">
+          <span>2<span class="span">nd</span></span>
+          Semester
+        </td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          1
+        </td>
+        <td>
+          Understand subject taught
+        </td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      
+      <tr id="tc3">
+        <td id="sh">
+          2
+        </td>
+        <td>
+          Expresses and Answer
+        </td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          3
+        </td>
+        <td>
+          Attention/Participation in classroom Activities
+        </td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          4
+        </td>
+        <td>
+          Inquisitiveness / Asks Questions
+        </td>
+        <td>3</td>
+        <td>2</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          5
+        </td>
+        <td>
+          Applies Reasoning and Logic
+        </td>
+        <td>3</td>
+        <td>2</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          6
+        </td>
+        <td>
+          Originality & Creativity
+        </td>
+        <td>3</td>
+        <td>2</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          7
+        </td>
+        <td>
+          copies accurately from the board
+        </td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          8
+        </td>
+        <td>
+          Oral/Aural ability
+        </td>
+        <td>3</td>
+        <td>2</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          9
+        </td>
+        <td>
+          Standardized use of sign language
+        </td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          10
+        </td>
+        <td>
+          Does class work by him/herself
+        </td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          11
+        </td>
+        <td>
+          Does home work by him/herself
+        </td>
+        <td>5</td>
+        <td>4</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          12
+        </td>
+        <td>
+          Cleanliness of books & Ex. Copies
+        </td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          13
+        </td>
+        <td>
+          Maintenance of books & Ex. copies
+        </td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          14
+        </td>
+        <td>
+          Regularity in class
+        </td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td id="he2">
+          PERFORMANCE OUTSIDE THE CLASSROOM CO- CURRICULAR
+        </td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          15
+        </td>
+        <td>
+          Personal Hygiene/dress
+        </td>
+        <td>2</td>
+        <td>5</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          16
+        </td>
+        <td>
+          Takes care of personal & school properties
+        </td>
+        <td>2</td>
+        <td>5</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          17
+        </td>
+        <td>
+          Helpfulness / co-operative / friendliness
+        </td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          18
+        </td>
+        <td>
+          Active & performance in games, work, art & craft
+        </td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          19
+        </td>
+        <td>
+          Leadership quality
+        </td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr id="tc3">
+        <td id="sh">
+          21
+        </td>
+        <td>
+          Manners / Discipline
+        </td>
+        <td>2</td>
+        <td>5</td>
+      </tr>
+      <tr id="tga">
+        <td id="last">
+          TOTAL POINTS
+        </td>
+        <td>60</td>
+        <td>70</td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>
